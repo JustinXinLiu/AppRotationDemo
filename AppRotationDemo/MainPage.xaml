@@ -1,14 +1,24 @@
-﻿<Page
-    x:Class="AppRotationDemo.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AppRotationDemo"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="AppRotationDemo.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
     <Grid>
+        <Canvas x:Name="ImageHost">
+            <Image x:Name="BackgroundImage"
+                   Source="/Images/john-towner-154060-unsplash.jpg"
+                   Stretch="UniformToFill" />
 
+            <TextBlock x:Name="Title"
+                       FontFamily="Tw Cen MT"
+                       FontSize="32"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       LineHeight="48"><Run Text="Photo by" /><LineBreak /><Run FontSize="48" Text="JOHN TOWNER" /><LineBreak /><Run Text="on" />
+                <Hyperlink Foreground="White" NavigateUri="http://www.infinitesquare.com">Unsplash</Hyperlink>
+            </TextBlock>
+        </Canvas>
     </Grid>
 </Page>
